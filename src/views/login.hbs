@@ -1,0 +1,40 @@
+<body class="login">
+
+    {{>navigation}}
+
+    <div class="contenedor-login">
+        <div class="info">
+            <h1 class="info__titulo">Iniciar Sesión</h3>
+                <p class="info__descripcion">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eaque quia exercitationem fuga harum
+                    pariatur ipsa adipisci consectetur saepe obcaecati doloribus quas ducimus nisi suscipit numquam
+                    fugit voluptas illum, consequuntur nemo eligendi! Ea, nihil temporibus eligendi omnis ipsa, labore
+                    totam repellat assumenda ipsam, iusto optio. Porro quis consequuntur amet accusantium!
+                </p>
+                <a class="mas-info" href="#">Lee mas sobre nosotros</a>
+        </div>
+
+        <form id="login" class="login-registrarse">
+            <h3 class="login__titulo">Iniciar Sesión</h3>
+            
+            <div class="login-cuestionario">
+
+                <p class="login__palabras">Correo</p>
+                <input id="email" class="login__name" type="email" placeholder="Correo">
+
+                <p class="login__palabras">Contraseña</p>
+                <input id="password" class="login__password" type="password" placeholder="Contraseña">
+            </div>
+
+            <a class="link-login" href="/usuarios/add">Crear cuenta nueva</a>
+            <a class="link-login" href="#">Terminos de Privacidad y Seguridad</a>
+            <input class="boton-crear-cuenta" type="submit" value="Iniciar Sesión">
+        </form>
+    </div>
+
+    <script src="/js/login.js"></script>
+    
+</body>
+
+
+{{!-- https://www.youtube.com/watch?v=dFb1r4rUYMQ&list=PLo5lAe9kQrwqUEXK7oQbzv63KsdODzuAy&index=13&ab_channel=FaztCode --}}

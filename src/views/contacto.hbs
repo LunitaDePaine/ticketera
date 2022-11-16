@@ -1,0 +1,147 @@
+<body class="login">
+
+    {{>navigation}}
+
+
+    <div class="contenedor-contacto">
+        <div class="contenedor-contacto__titulo">
+            <h1>Contactanos</h1>
+        </div>
+
+        <div class="contenedor-contacto__datos">
+            <p>
+                Estimado cliente, es importante que nos brinde el mayor detalle posible sobre la situación que quiere
+                reportar,
+                esto nos ayuda en la busqueda de su perfil o compra que llevó a cabo.
+
+                Información relacionada a su compra:
+            </p>
+
+            <ul class="lista-datos">
+                <li>Nombre y Apellidos</li>
+                <li>Correo</li>
+                <li>Telefono</li>
+                <li>Numero de Orden</li>
+                <li>Nombre del Evento</li>
+                <li>Descripción detallada de la situación</li>
+            </ul>
+        </div>
+
+
+
+        <div class="campos-preguntas un-campo">
+
+            <label>Seleccione la razón para esta consulta (requerido):</label>
+
+            <select list="razones" placeholder="Seleccione Razon">
+
+                <datalist id="razones">
+                    <option value>Seleccione una razón</option>
+                    <option value="Actualizar nuevo correo electronico">Actualizar nuevo correo electronico</option>
+                    <option value="Boletos perdidos o robados">Boletos perdidos o robados</option>
+                    <option value="Información sobre protocolos COVID-19">Información sobre protocolos COVID-19</option>
+                    <option value="No he recibido la orden de confirmación y/o boletos">No he recibido la orden de
+                        confirmación y/o boletos</option>
+                    <option value="Solicitar información">Solicitar información</option>
+                    <option value="Solicitar un reembolso">Solicitar un reembolso</option>
+                    <option value="Solicitar un cambio de fecha">Solicitar un cambio de fecha</option>
+                </datalist>
+            </select>
+        </div>
+
+        <div class="campos-preguntas dos-campos">
+
+            <div class="campos-preguntas-p1">
+                <label>Seleccione el evento relacionado:</label>
+
+                <select list="eventos" placeholder="Seleccione Evento">
+
+                    <datalist id="eventos">
+                        <option value>Seleccione evento</option>
+                        <option value="Marvel">Marvel</option>
+                        <option value="Marvel">Marvel</option>
+                        <option value="Marvel">Marvel</option>
+                        <option value="Marvel">Marvel</option>
+                        <option value="Marvel">Marvel</option>
+                        <option value="Marvel">Marvel</option>
+                    </datalist>
+                </select>
+            </div>
+
+            <div class="campos-preguntas-p2">
+                <label>Seleccione la razón para esta consulta (requerido):</label>
+
+                <input class="input-contacto" type="text" placeholder="Numero de orden">
+            </div>
+        </div>
+
+
+        <div class="campos-preguntas un-campo">
+
+            <label>Nombre del Comprador Inicial (requerido):</label>
+
+            <input class="input-contacto" type="text" placeholder="Nombre completo">
+        </div>
+
+
+        <div class="campos-preguntas un-campo">
+
+            <label>El correo electrónico que usó en la orden ó donde podemos contactarle (requerido):</label>
+
+            <input class="input-contacto" type="text" placeholder="Correo electronico">
+        </div>
+
+
+        <div class="campos-preguntas un-campo">
+
+            <label>Su número de teléfono (requerido): </label>
+
+            <input class="input-contacto" type="number" placeholder="Numero de telefono">
+        </div>
+        <div class="campos-preguntas un-campo">
+
+            <label>Describa su situación clara y detalladamente (requerido):</label>
+
+            <textarea class="textarea-contacto" type="number" placeholder="Describa su situación"></textarea>
+        </div>
+
+
+
+        <div class="contenedor-contacto__datos">
+            <p>
+                *** Tenga en cuenta que los datos que incluya en este formulario se nos enviarán a través de Internet.
+                Existen riesgos relacionados con la comunicación electrónica. Consulte nuestra Política de privacidad
+                para obtener más información.
+            </p>
+
+            <p>
+                Al enviar un formulario a través de este sitio web, usted acepta que, con el propósito de contactarlo,
+                responder a su consulta, dirigirlo a la persona adecuada dentro de Ticketera® y proporcionarle
+                publicaciones o materiales relacionados con nuestros eventos, proporcionados por nosotros, por los
+                medios de comunicación que consideremos apropiados (incluso por correo electrónico, llamada de voz o
+                mensaje de texto a cualquier número de teléfono que nos proporcione), su nombre, número de teléfono,
+                país de residencia y dirección de correo electrónico (sus "Datos") pueden compartirse, en forma
+                electrónica y / o física, con los empleados de Ticketera®, TiX.By LLC (colectivamente, “Ticketera®”).
+                Ticketera® procesará sus datos con el fin de proporcionar servicios al cliente en relación con este
+                sitio web. Si no nos proporciona los Datos marcados como obligatorios en este formulario, o no da su
+                consentimiento para el uso / divulgación de sus Datos como se describe anteriormente, es posible que no
+                podamos comunicarnos con usted, responder a su consulta, dirigirlo a la persona apropiada dentro de
+                Ticketera. ® o proporcionarle los materiales o la información descritos anteriormente. Si: (i) tiene
+                alguna pregunta o queja sobre la forma en que Ticketera® recopila y utiliza sus Datos; (ii) no queremos
+                que nos comuniquemos con usted; (iii) ya no desea que se retengan sus Datos; o (iv) desea ejercitar los
+                derechos que pueda tener en materia de acceso, rectificación, oposición y supresión, infórmenos enviando
+                un correo electrónico a nuestro Personal de Atención al Cliente en ayuda@ticketera.com. Responderemos a
+                su solicitud / queja en el plazo especificado en las leyes aplicables o, de lo contrario, dentro de un
+                plazo razonable.
+            </p>
+
+            <button class="boton-contacto">Enviar Información</button>
+        </div>
+    </div>
+
+<footer class="footer">
+    {{>footer}}
+</footer>
+
+
+<script src="/js/contacto.js"></script>

@@ -1,0 +1,60 @@
+<header class="header">
+
+  <div class="contenedor">
+    <div class="barra">
+      <a class="logo" href="/">
+        <h1 class="logo__nombre no-margin centrar-texto">Ticketera</h1>
+      </a>
+
+      <nav class="navegacion">
+        <a href="/about" class="navegacion__enlace">Acerca de</a>
+        <a href="/preguntasf" class="navegacion__enlace">Preguntas
+          frecuentes</a>
+        <a href="/contacto" class="navegacion__enlace">Contacto</a>
+        <a id="eliminar" href="/login" class="navegacion__enlace">Mi cuenta</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="header__texto">
+    <h2 class="no-margin">Peliculas para ver con tu familia</h2>
+    <p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipisicing
+      elit. Beatae, provident ?</p>
+  </div>
+</header>
+
+    <!-- Buscador -->
+    <div class="buscador">
+        <input class="buscador__caja" type="search" placeholder="Buscar pelicula">
+        <input class="buscador__boton" type="submit" value="Buscar">
+    </div>
+
+
+{{!-- Peliculas --}}
+
+<div class="contenedor-pelicula">
+  {{#each peliculas}}
+  <a id="pelicula4" class="ir-pelicula" href="/peli/{{_id}}">
+    <div class="pelicula">
+      <img id="imagen4" class="pelicula__imagen" src="{{image}}">
+      <h3 id="tituloPelicula4" class="pelicula__titulo">{{name}}</h3>
+      <p id="descripcionPelicula4" class="pelicula__info">{{description}}</p>
+    </div>
+  </a>
+  {{/each}}
+</div>
+
+<form action="/peliculas/add" class="crearPelicula">
+  <button id="botonCrearPelicula" class="botonCrearPelicula" type="submit">Crear Pelicula</button>
+</form>
+
+
+
+{{!-- Fin Peliculas --}}
+
+
+<footer class="footer">
+    {{>footer}}
+</footer>
+
+<script src="/js/index.js"></script>

@@ -1,0 +1,31 @@
+<body class="login">
+{{>navigation}}
+
+      <div class="contenedor-registro">
+        <form id="registro" action="/usuarios/new-user" method="post" class="registrarse-r">
+            <h3 class="registro__titulo">Registrarse</h3>
+
+            <div class="cuestionario-r">
+
+                <!-- Nombre -->
+                <p class="registro__palabras">Nombre</p>
+                <input id="nombre" name="name" class="registro__name" type="text" placeholder="Nombre">
+
+                <!-- Email -->
+                <p class="registro__palabras">Email</p>
+                <input id="email" name="email" class="registro__name" type="email" placeholder="Email">
+
+                <!-- Contrasenha -->
+                <p class="registro__palabras">Contraseña</p>
+                <input id="password" name="password" class="registro__password" type="password" placeholder="Contraseña">
+            </div>
+
+            <!-- Boton Submit -->
+            <input class="boton-registro" type="submit" value="Registrarse">
+        </form>
+    </div>
+
+</body>
+
+
+<script src="/js/sandbox.js"></script>

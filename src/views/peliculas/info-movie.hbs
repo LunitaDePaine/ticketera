@@ -1,0 +1,44 @@
+{{>navigation}}
+
+<!-- Peliculas -->
+<div class="contenedor-peli-pag">
+  <div class="contenedor-img-btn">
+    <img
+      id="imagenPelicula"
+      class="pelicula__imagen__v2"
+      src="{{peliculas.image}}"
+    />
+
+    <p id="valoracionPelicula" class="valoracion">Valoración: {{peliculas.valuation}} / 5</p>
+
+    <a href="/peli/seats/{{peliculas._id}}">
+      <input
+        id="comprarBoleto"
+        class="comprar-boton"
+        type="button"
+        value="Comprar Boleto"
+      />
+    </a>
+    <form action="/peliculas/delete/{{peliculas._id}}?_method=DELETE" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <button id="quitar" class="comprar-boton" type="submit">Delete</button>
+    </form>
+    <a id="quitar2" class="linkEditar" href="/peliculas/edit/{{peliculas._id}}">Edit</a>
+  </div>
+
+  <div class="contenedor-peli-desc">
+    <h2 id="tituloPelicula" class="pelicula__nombre">{{peliculas.name}}</h2>
+
+    <p id="descPelicula" class="pelicula__desc">{{peliculas.sinopsis}}</p>
+  </div>
+  
+
+
+</div>
+
+
+<footer class="footer">
+    {{>footer}}
+</footer>
+
+<script src="/js/peli.js"></script>

@@ -1,0 +1,39 @@
+<body class="body">
+
+    <!-- Header y Nav -->
+
+    {{>navigation}}
+
+    <!-- Peliculas -->
+
+        <div class="contenedor-cuenta">
+
+        {{!-- <h1>{{}}</h1> --}}
+
+        <div class="contenedor-datos">
+            <h1 class="cuenta-titulo">Mi cuenta</h1>
+            <img class="cuenta__img" src="img/luffy.jpeg">
+
+            <form id="cerrar">
+                <p class="text__cuenta">Nombre:</p>
+                <p id="name" class="dato__cuenta">Hola</p>
+
+                <p class="text__cuenta">Email:</p>
+                <p id="email" class="dato__cuenta">hola@gmail.com</p>
+                <a id="cambiar" class="link__cuenta">Cambiar Contraseña</a>
+                <input class="boton-logout" type="submit" value="Cerrar Sesión">
+            </form>
+        </div>
+
+        <div class="contenedor-evento">
+            <h3 class="cuenta__titulo">Boletos Comprados</h3>
+            <div id="contenedor-boletos" class="contenedor-boletos">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/js/mi-cuenta.js"></script>
+    <script src="/js/mi-cuentados.js"></script>
+
+</body>

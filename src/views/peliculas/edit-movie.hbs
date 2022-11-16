@@ -1,0 +1,55 @@
+<body class="login">
+    {{>navigation}}
+
+    <div class="contenedor-registro">
+        <form id="editarPelicula" action="/peliculas/edit/{{peliculas._id}}?_method=PUT" class="registrarse-r" method="POST" class="registrarse-r">
+            <h3 class="registro__titulo">Editar Pelicula</h3>
+
+            <div class="cuestionario-r">
+                <input type="hidden" name="_method" value="PUT"> 
+
+                <p class="registro__palabras">*Nombre</p>
+                <input type="text" name="name" value="{{peliculas.name}}" class="registro__name">
+
+                <p class="registro__palabras">*Descripcion</p>
+                <input type="text" name="description" value="{{peliculas.description}}" class="registro__name">
+
+                <p class="registro__palabras">*Sinopsis</p>
+                <input type="text" name="sinopsis" value="{{peliculas.sinopsis}}" class="registro__name">
+
+                <p class="registro__palabras">*Valuacion</p>
+                <input type="text" name="valuation" value="{{peliculas.valuation}}" class="registro__name">
+
+                <p class="registro__palabras">*Genero</p>
+                <input type="text" name="gender" value="{{peliculas.gender}}" class="registro__name">
+
+                <p class="registro__palabras">Cantidad Disponible</p>
+                <input type="text" name="stock" value="{{peliculas.stock}}" class="registro__name">
+
+                <p class="registro__palabras">Asientos</p>
+                <input type="text" name="seats" value="{{peliculas.seats}}" class="registro__name">
+
+                <p class="registro__palabras">Personas</p>
+                <input type="text" name="people" value="{{peliculas.people}}" class="registro__name">
+
+                <p class="registro__palabras">Imagen</p>
+                <input type="text" name="image" value="{{peliculas.image}}" class="registro__name">
+            </div>
+
+            <input class="boton-registro" type="submit" value="Editar">
+        </form>
+    </div>
+
+</body>
+
+{{!-- <form id="editarUsuario" method="POST">
+<input type="hidden" name="_method" value="PUT"> 
+    <input type="text" name="name" value="{{usuarios.name}}">
+    <input type="email" name="email" value="{{usuarios.email}}">
+    <input type="text" name="password" value="{{usuarios.password}}">
+    <button type="submit">Enviar</button>
+</form> --}}
+
+{{!-- <script src="/js/edit-movie.js"></script> --}}
+
+</body>

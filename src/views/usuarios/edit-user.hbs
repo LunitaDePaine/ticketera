@@ -1,0 +1,34 @@
+<body class="login">
+
+{{>navigation}}
+
+<div class="contenedor-cambio">
+    <form id="editarUsuario" class="registrarse-r" method="POST">
+        <h3 class="registro__titulo">Cambiar Contraseña</h3>
+
+        <div class="cuestionario-r">
+            <input type="hidden" name="_method" value="PUT"> 
+            <input type="hidden" name="name" value="{{usuarios.name}}">
+            <input type="hidden" name="email" value="{{usuarios.email}}">
+                
+            <p class="cambio__palabras">Ingresa la Nueva Contraseña</p>
+            <input id="newPassword" class="cambio__password" type="password" name="password" placeholder="Nueva Contraseña">
+
+        </div>
+
+        <!-- Boton Submit -->
+        <input class="boton-cambio" type="submit" value="Aceptar">
+    </form>
+</div>
+
+{{!-- <form id="editarUsuario" method="POST">
+<input type="hidden" name="_method" value="PUT"> 
+    <input type="text" name="name" value="{{usuarios.name}}">
+    <input type="email" name="email" value="{{usuarios.email}}">
+    <input type="text" name="password" value="{{usuarios.password}}">
+    <button type="submit">Enviar</button>
+</form> --}}
+
+<script src="/js/edit-user.js"></script>
+
+</body>

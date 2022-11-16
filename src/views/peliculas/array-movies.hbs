@@ -1,0 +1,12 @@
+<div>
+  {{#each peliculas}}
+    <div>
+      <h4>{{name}} <a href="/usuarios/edit/{{_id}}">Edit</a> </h4>
+      <p>{{email}}</p>
+      <form action="/usuarios/delete/{{_id}}?_method=DELETE" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  {{/each}}
+</div>

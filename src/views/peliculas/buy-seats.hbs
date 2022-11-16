@@ -1,0 +1,130 @@
+{{>navigation}}
+
+
+<div class="contenedor-peli-pag">
+        <div class="contenedor-img-btn">
+            <img id="imagenPelicula" class="pelicula__imagen__v2" src="{{peliculas.image}}">
+
+            <p id="valoracionPelicula" class="valoracion">Valoración: {{peliculas.valuation}} / 5</p>
+
+            <form action="/peliculas/edit/{{peliculas._id}}?_method=PUT" method="POST">
+              <input type="hidden" name="_method" value="PUT"> 
+              <input type="hidden" name="name" value="{{peliculas.name}}">
+              <input type="hidden" name="description" value="{{peliculas.description}}">
+              <input type="hidden" name="sinopsis" value="{{peliculas.sinopsis}}">
+              <input type="hidden" name="valuation" value="{{peliculas.valuation}}">
+              <input type="hidden" name="gender" value="{{peliculas.gender}}">
+              <input type="hidden" name="stock" value="{{peliculas.stock}}">
+              <input type="hidden" name="people" id="personas">
+              <input type="hidden" name="image" value="{{peliculas.image}}">
+              <input id="comprarAsiento" class="comprar-boton" type="submit" name="seats">
+            </form>
+
+            
+            {{!-- <a href="#">
+                <input id="comprarAsiento" class="comprar-boton" type="button" value="Comprar Asientos">
+            </a> --}}
+        </div>
+
+        <div class="contenedor-peli-desc">
+            <h2 id="tituloPelicula" class="pelicula__nombre">{{peliculas.name}}</h2>
+
+            <div class="contenedor-asientos">
+                <p class="asientos__numeros"></p>
+                <p class="asientos__numeros">1</p>
+                <p class="asientos__numeros">2</p>
+                <p class="asientos__numeros">3</p>
+                <p class="asientos__numeros">4</p>
+                <p class="asientos__numeros">5</p>
+                <p class="asientos__numeros">6</p>
+                <p class="asientos__numeros">7</p>
+                <p class="asientos__numeros">8</p>
+                <p class="asientos__numeros">9</p>
+                <p class="asientos__numeros2">10</p>
+
+                <!-- Fila A -->
+                <p class="asientos__letra">A</p>
+                <input id="A1" class="asiento" type="button">
+                <input id="A2" class="asiento" type="button">
+                <input id="A3" class="asiento" type="button">
+                <input id="A4" class="asiento" type="button">
+                <input id="A5" class="asiento" type="button">
+                <input id="A6" class="asiento" type="button">
+                <input id="A7" class="asiento" type="button">
+                <input id="A8" class="asiento" type="button">
+                <input id="A9" class="asiento" type="button">
+                <input id="A10" class="asiento" type="button">
+
+                <!-- Fila B -->
+                <p class="asientos__letra">B</p>
+                <input id="B1" class="asiento" type="button">
+                <input id="B2" class="asiento" type="button">
+                <input id="B3" class="asiento" type="button">
+                <input id="B4" class="asiento" type="button">
+                <input id="B5" class="asiento" type="button">
+                <input id="B6" class="asiento" type="button">
+                <input id="B7" class="asiento" type="button">
+                <input id="B8" class="asiento" type="button">
+                <input id="B9" class="asiento" type="button">
+                <input id="B10" class="asiento" type="button">
+
+                <!-- Fila C -->
+                <p class="asientos__letra">C</p>
+                <input id="C1" class="asiento" type="button">
+                <input id="C2" class="asiento" type="button">
+                <input id="C3" class="asiento" type="button">
+                <input id="C4" class="asiento" type="button">
+                <input id="C5" class="asiento" type="button">
+                <input id="C6" class="asiento" type="button">
+                <input id="C7" class="asiento" type="button">
+                <input id="C8" class="asiento" type="button">
+                <input id="C9" class="asiento" type="button">
+                <input id="C10" class="asiento" type="button">
+
+                <!-- Fila D -->
+                <p class="asientos__letra">D</p>
+                <input id="D1" class="asiento" type="button">
+                <input id="D2" class="asiento" type="button">
+                <input id="D3" class="asiento" type="button">
+                <input id="D4" class="asiento" type="button">
+                <input id="D5" class="asiento" type="button">
+                <input id="D6" class="asiento" type="button">
+                <input id="D7" class="asiento" type="button">
+                <input id="D8" class="asiento" type="button">
+                <input id="D9" class="asiento" type="button">
+                <input id="D10" class="asiento" type="button">
+
+                <!-- Fila E -->
+                <p class="asientos__letra">E</p>
+                <input id="E1" class="asiento" type="button">
+                <input id="E2" class="asiento" type="button">
+                <input id="E3" class="asiento" type="button">
+                <input id="E4" class="asiento" type="button">
+                <input id="E5" class="asiento" type="button">
+                <input id="E6" class="asiento" type="button">
+                <input id="E7" class="asiento" type="button">
+                <input id="E8" class="asiento" type="button">
+                <input id="E9" class="asiento" type="button">
+                <input id="E10" class="asiento" type="button">
+            </div>
+
+            <div class="contenedor-indice">
+                <input class="indice1" type="button">
+                <p class="indice__text">Disponible</p>
+    
+                <input class="indice2" type="button">
+                <p class="indice__text">Seleccionado</p>
+    
+                <input class="indice3" type="button">
+                <p class="indice__text">Ocupado</p>
+            </div>
+        </div>
+
+    </div>
+
+
+<footer class="footer">
+    {{>footer}}
+</footer>
+
+<script src="/js/asientos.js"></script>
